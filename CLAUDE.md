@@ -4,7 +4,7 @@
 - **Developer:** Muhamad Zaqrul (`zakrulabd`)
 - **Email:** `zakrulabd@gmail.com`
 - **Location:** Selangor, Malaysia
-- **Role:** Dedicated Solo Freelance Web Developer & Technical Marketer (No agency / No team wording).
+- **Role:** Senior Full-Stack Engineer (about five years in production) who also takes freelance web projects directly. Solo, so no agency / no team wording. Only state confirmed experience: a large AWS ecommerce platform (sole engineer from 2021), a healthcare monitoring platform on Azure (five codebases), and AI automation with n8n and OpenAI agents. Do not name past employers on the site.
 - **Communication Tone:** First-person direct and plain ("Let’s Discuss", "How I Work"). Avoid marketing filler and stacked em dashes in site copy.
 - **WhatsApp:** Pre-filled `wa.me` messages stay in Malay and address the owner as "Zakrul".
 - **Pricing:** Starter is a fixed RM800 (no hosting or custom domain). Professional is "From RM1,500" (custom domain for the first year, no hosting). Advanced is quoted per project. Keep prices in sync across `content.ts`, `content-ms.ts`, `faq-ms.ts`, `legal-ms.ts`, and `compare-ms.ts`.

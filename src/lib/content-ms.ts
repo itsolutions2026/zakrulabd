@@ -9,13 +9,13 @@ export const contentMs = {
   ...content,
   nav: { services: "Perkhidmatan", projects: "Hasil Kerja", pricing: "Pakej", contact: "Hubungi", cta: "Minta Sebut Harga" },
   hero: {
-    titleHl1: "Pembangun Web",
+    titleHl1: "Jurutera Full-Stack Kanan",
     titleB: " di Malaysia",
     titleSub: "Laman Web dan Sistem yang Membawa ",
     titleHl2: "Pelanggan",
-    body: "Saya membina laman web dan sistem web tersuai menggunakan React, Laravel dan WordPress, serta menyediakan SEO, analitik dan automasi supaya perniagaan anda mudah ditemui dan dihubungi. Anda berurusan terus dengan saya dari perbincangan pertama hingga laman dilancarkan.",
+    body: "Saya jurutera full-stack kanan dengan pengalaman kira-kira lima tahun membina sistem produksi, daripada platform e-dagang yang besar kepada perisian kesihatan dan automasi AI. Saya membina laman web dan sistem web tersuai menggunakan React, Laravel dan WordPress, serta menyediakan SEO, analitik dan automasi supaya perniagaan anda mudah ditemui dan dihubungi. Anda berurusan terus dengan saya dari perbincangan pertama hingga laman dilancarkan.",
     ctaPrimary: "Minta Sebut Harga", ctaSecondary: "Lihat Pakej",
-    chips: ["Berurusan terus dengan saya", "Prototaip hingga pelancaran", "Pengalaman SEO dan GA4 dalam sektor kesihatan"],
+    chips: ["Kira-kira lima tahun dalam sistem produksi", "Berurusan terus dengan saya", "Kesihatan, e-dagang dan automasi AI"],
   },
   services: {
     heading: "Perkhidmatan Saya", sub: "Reka bentuk, pembangunan dan pemasaran digital supaya perniagaan anda bukan sahaja ada laman web, tetapi juga mudah ditemui dalam talian.",
@@ -73,7 +73,7 @@ export const contentMs = {
   faq: faqMs,
   privacyPage: privacyMs,
   termsPage: termsMs,
-  footer: { ...content.footer, blurb: "Pembangunan web, sistem web tersuai dan pemasaran digital untuk PKS dan penyedia perkhidmatan kesihatan di Malaysia.", location: "Berpangkalan di Selangor · Berkhidmat di Ipoh dan seluruh Malaysia", services: "PERKHIDMATAN", servicesLinks: ["Pembangunan Web", "SEO dan Pemasaran", "Live Chat dan Automasi", "Hosting dan Sokongan"], howIWork: "CARA SAYA BEKERJA", howIWorkLinks: ["Proses", "Pakej", "Hasil", "Catatan"], getStarted: "MULAKAN", getStartedLinks: ["Minta Sebut Harga", "Lihat Pakej", "Lawati Kedai", "Cuba Demo Inventori", "Cuba Demo Tempahan"], privacy: "Dasar Privasi", terms: "Terma dan Syarat", rights: "Hak cipta terpelihara.", backToHome: "Kembali ke Laman Utama" },
+  footer: { ...content.footer, blurb: "Kejuruteraan full-stack kanan, sistem web tersuai dan pemasaran digital untuk PKS dan penyedia perkhidmatan kesihatan di Malaysia.", location: "Berpangkalan di Selangor · Berkhidmat di Ipoh dan seluruh Malaysia", services: "PERKHIDMATAN", servicesLinks: ["Pembangunan Web", "SEO dan Pemasaran", "Live Chat dan Automasi", "Hosting dan Sokongan"], howIWork: "CARA SAYA BEKERJA", howIWorkLinks: ["Proses", "Pakej", "Hasil", "Catatan"], getStarted: "MULAKAN", getStartedLinks: ["Minta Sebut Harga", "Lihat Pakej", "Lawati Kedai", "Cuba Demo Inventori", "Cuba Demo Tempahan"], privacy: "Dasar Privasi", terms: "Terma dan Syarat", rights: "Hak cipta terpelihara.", backToHome: "Kembali ke Laman Utama" },
   notFound: { code: "404", titleA: "Halaman ini ", titleHl: "tidak ditemui", body: "Pautan ini mungkin sudah berubah atau alamatnya salah. Anda boleh kembali ke laman utama, melihat pakej atau menghubungi saya jika memerlukan bantuan.", primary: "Kembali ke Laman Utama", secondary: "Lihat Pakej", linksLabel: "ATAU TERUS KE", links: ["Perkhidmatan", "Hasil Kerja", "Pakej", "Bandingkan Pakej"] },
   errorPage: { code: "500", titleA: "Berlaku masalah pada ", titleHl: "laman ini", body: "Ralat ini berpunca daripada laman saya. Sila cuba semula sebentar lagi. Jika masalah berterusan, hubungi saya dan terangkan apa yang anda lakukan semasa ralat berlaku.", primary: "Cuba Lagi", secondary: "Kembali ke Laman Utama", report: "Laporkan ralat ini" },
 };

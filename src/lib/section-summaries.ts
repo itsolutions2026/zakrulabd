@@ -38,12 +38,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "main",
     label: { en: "Introduction", ms: "Pengenalan" },
     text: {
-      en: "I build websites and custom web systems for businesses in Malaysia, then set up the SEO, analytics and automation that bring people to them. You deal with me directly.",
-      ms: "Saya bina laman web dan sistem web tersuai untuk perniagaan di Malaysia, kemudian sediakan SEO, analitik dan automasi yang membawa orang ke laman itu. Anda berurusan terus dengan saya.",
+      en: "I am a senior full-stack engineer. I build websites and custom web systems for businesses in Malaysia, then set up the SEO, analytics and automation that bring people to them. You deal with me directly.",
+      ms: "Saya jurutera full-stack kanan. Saya bina laman web dan sistem web tersuai untuk perniagaan di Malaysia, kemudian sediakan SEO, analitik dan automasi yang membawa orang ke laman itu. Anda berurusan terus dengan saya.",
     },
     points: {
-      en: ["You work with me directly", "Prototype, build, launch", "SEO and GA4 for healthcare clients"],
-      ms: ["Berurusan terus dengan saya", "Prototaip, bina, lancar", "SEO dan GA4 untuk klien kesihatan"],
+      en: ["About five years in production", "You work with me directly", "Healthcare, ecommerce and AI automation"],
+      ms: ["Kira-kira lima tahun dalam sistem produksi", "Berurusan terus dengan saya", "Kesihatan, e-dagang dan automasi AI"],
     },
     suggestions: [
       { label: { en: "See what I do", ms: "Lihat apa yang saya buat" }, action: { kind: "scroll", id: "services" } },
@@ -205,12 +205,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "about-work",
     label: { en: "What I work on", ms: "Bidang kerja" },
     text: {
-      en: "React and Laravel applications, WordPress sites, technical SEO, Google Analytics 4 and enquiry automation. The scope follows the business problem, from a small local site to a custom system.",
-      ms: "Aplikasi React dan Laravel, laman WordPress, SEO teknikal, Google Analytics 4 dan automasi pertanyaan. Skop mengikut masalah perniagaan, daripada laman tempatan kecil kepada sistem tersuai.",
+      en: "React and Laravel applications, WordPress sites, technical SEO, Google Analytics 4 and enquiry automation, plus larger systems: an AWS ecommerce platform, a healthcare platform on Azure and AI automation with n8n.",
+      ms: "Aplikasi React dan Laravel, laman WordPress, SEO teknikal, Google Analytics 4 dan automasi pertanyaan, serta sistem yang lebih besar: platform e-dagang di AWS, platform kesihatan di Azure dan automasi AI dengan n8n.",
     },
     points: {
-      en: ["React and Laravel", "WordPress", "Technical SEO", "GA4", "Enquiry automation"],
-      ms: ["React dan Laravel", "WordPress", "SEO teknikal", "GA4", "Automasi pertanyaan"],
+      en: ["React and Laravel", "WordPress", "Technical SEO", "GA4", "AWS and Azure", "AI automation"],
+      ms: ["React dan Laravel", "WordPress", "SEO teknikal", "GA4", "AWS dan Azure", "Automasi AI"],
     },
     suggestions: [
       { label: { en: "See the services", ms: "Lihat perkhidmatan" }, action: { kind: "page", path: "/#services" } },

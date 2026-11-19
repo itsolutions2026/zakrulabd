@@ -7,14 +7,14 @@ export const content = {
     cta: "Get a Free Quote",
   },
   hero: {
-    titleHl1: "Web Developer",
+    titleHl1: "Senior Full-Stack Engineer",
     titleB: " in Malaysia",
     titleSub: "Websites and Systems That Bring You ",
     titleHl2: "Customers",
-    body: "I build websites and custom web systems with React, Laravel, and WordPress, then set up the SEO, analytics, and automation that bring people to them. You deal with me directly, from the first conversation through to launch.",
+    body: "I am a senior full-stack engineer with about five years of building production systems, from a large ecommerce platform to healthcare software and AI automation. I build websites and custom web systems with React, Laravel, and WordPress, then set up the SEO, analytics, and automation that bring people to them. You deal with me directly, from the first conversation through to launch.",
     ctaPrimary: "Get a Free Quote",
     ctaSecondary: "See Packages",
-    chips: ["You work with me directly", "Prototype, build, launch", "SEO and GA4 for healthcare clients"],
+    chips: ["About five years in production", "You work with me directly", "Healthcare, ecommerce and AI automation"],
   },
   services: {
     heading: "What I Do",
@@ -694,7 +694,7 @@ export const content = {
   },
   footer: {
     blurb:
-      "Freelance web development, custom web systems, and digital marketing for SMEs and healthcare providers in Malaysia.",
+      "Senior full-stack engineering, custom web systems, and digital marketing for SMEs and healthcare providers in Malaysia.",
     location: "Based in Selangor · Serving Ipoh and Malaysia",
     services: "SERVICES",
     servicesLinks: ["Web Development", "SEO & Marketing", "Live Chat & Automation", "Hosting & Support"],

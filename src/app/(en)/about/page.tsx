@@ -13,12 +13,12 @@ import { wa, waMessages } from "@/lib/contact";
 export const metadata: Metadata = {
   title: "About Muhamad Zaqrul",
   description:
-    "Meet Muhamad Zaqrul, a Selangor-based freelance web developer working with businesses in Ipoh and across Malaysia. See real projects, services and contact details.",
+    "Meet Muhamad Zaqrul, a Selangor-based senior full-stack engineer working with businesses in Ipoh and across Malaysia. See real projects, services and contact details.",
   alternates: { canonical: "/about", languages: { en: url("/about"), ms: url("/ms/about"), "x-default": url("/about") } },
   openGraph: {
     title: "About Muhamad Zaqrul | Zakrul",
     description:
-      "Freelance web development, technical SEO and analytics for businesses in Ipoh, Selangor and across Malaysia.",
+      "Senior full-stack engineering, technical SEO and analytics for businesses in Ipoh, Selangor and across Malaysia.",
     url: url("/about"),
   },
 };
@@ -55,7 +55,7 @@ export default function AboutPage({ locale = "en" }: { locale?: "en" | "ms" }) {
           </RevealText></h1>
         </div>
         <p className="mt-6 text-lg leading-relaxed text-body"><RevealText text immediate>
-          {locale === "ms" ? "Saya pembangun web dan pemasar digital bebas yang berpangkalan di Selangor. Saya membina laman web dan sistem web tersuai untuk perniagaan di Malaysia, kemudian membantu mereka mengukur serta menambah baik cara pelanggan menemui dan menggunakan laman tersebut. Pelanggan " : "I am a freelance web developer and digital marketer based in Selangor. I build websites and custom web systems for Malaysian businesses, then help them measure and improve how people find and use those sites. Clients "}
+          {locale === "ms" ? "Saya jurutera full-stack kanan yang berpangkalan di Selangor, dengan pengalaman kira-kira lima tahun membina sistem produksi. Saya membina laman web dan sistem web tersuai untuk perniagaan di Malaysia, kemudian membantu mereka mengukur serta menambah baik cara pelanggan menemui dan menggunakan laman tersebut. Pelanggan " : "I am a senior full-stack engineer based in Selangor, with about five years of building production systems. I build websites and custom web systems for Malaysian businesses, then help them measure and improve how people find and use those sites. Clients "}
           <Mark>{locale === "ms" ? "berurusan terus dengan saya" : "work with me directly"}</Mark>
           {locale === "ms" ? ", daripada taklimat pertama hingga pelancaran." : ", from the first brief to launch."}
         </RevealText></p>
@@ -63,6 +63,10 @@ export default function AboutPage({ locale = "en" }: { locale?: "en" | "ms" }) {
         <h2 id="about-work" className="mt-12 font-display text-2xl font-bold text-navy"><RevealText>{locale === "ms" ? "Bidang " : "What I "}<Mark>{locale === "ms" ? "kerja saya" : "work on"}</Mark></RevealText></h2>
         <p className="mt-4 leading-relaxed text-body"><RevealText text>
           {locale === "ms" ? "Kerja saya merangkumi aplikasi React dan Laravel, laman WordPress, SEO teknikal, Google Analytics 4 serta automasi pertanyaan. Skop bergantung pada masalah perniagaan: laman tempatan yang kecil mungkin hanya memerlukan tawaran yang jelas dan aliran pesanan WhatsApp; operasi lebih besar mungkin memerlukan sistem serta laporan tersuai. Saya juga sedang belajar GEO, iaitu cara sesebuah laman disebut dalam jawapan AI Google." : "My work covers React and Laravel applications, WordPress websites, technical SEO, Google Analytics 4 and enquiry automation. The scope depends on the business problem: a small local site may need a clear offer and a WhatsApp order flow; a larger operation may need a custom system and reporting. I am also learning GEO, which is how a site gets mentioned in the answers Google’s AI gives."}
+        </RevealText></p>
+
+        <p className="mt-4 leading-relaxed text-body"><RevealText text>
+          {locale === "ms" ? "Saya juga pernah membina sistem yang lebih besar. Mulai 2021 saya menjadi satu-satunya jurutera pada sebuah platform e-dagang B2B yang besar di AWS, dengan lebih 100 juta imej produk dan lebih 10 juta transaksi, dan saya mempercepatkan pemuatan halaman daripada lebih sepuluh saat kepada kurang 200 ms. Saya juga jurutera full-stack kanan pada platform pemantauan kesihatan untuk kemudahan jagaan kejururawatan, merangkumi lima pangkalan kod dan dihoskan di Azure. Terbaharu, saya membina saluran automasi AI dengan n8n dan agen OpenAI yang mengkaji prospek jualan dan menulis hasilnya ke Google Sheets." : "I have also built larger systems. From 2021 I was the only engineer on a large B2B ecommerce platform running on AWS, with over 100 million product images and more than 10 million transactions, where I brought page loads from over ten seconds to under 200 ms. I was the senior full-stack engineer on a healthcare monitoring platform for nursing facilities, spread across five codebases and hosted on Azure. More recently I have built AI automation pipelines with n8n and OpenAI agents that research sales leads and write the results to Google Sheets."}
         </RevealText></p>
 
         <h2 id="about-skills" className="mt-12 font-display text-2xl font-bold text-navy"><RevealText>{locale === "ms" ? "Kemahiran dan " : "Skills and "}<Mark>{locale === "ms" ? "framework" : "frameworks"}</Mark></RevealText></h2>

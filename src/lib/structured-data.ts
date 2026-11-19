@@ -58,7 +58,7 @@ export const structuredData = {
       sameAs: PROFILES,
       email: "zakrulabd@gmail.com",
       telephone: "+60102551527",
-      jobTitle: "Freelance Web Developer & Digital Marketer",
+      jobTitle: "Senior Full-Stack Engineer",
       knowsLanguage: ["en", "ms"],
       address: {
         "@type": "PostalAddress",
@@ -153,7 +153,7 @@ export const structuredData = {
       "@type": "WebPage",
       "@id": ID.homepage,
       url: SITE,
-      name: "Web Developer in Ipoh & Selangor, Malaysia | Zakrul",
+      name: "Senior Full-Stack Web Developer, Ipoh & Selangor | Zakrul",
       isPartOf: { "@id": ID.website },
       about: { "@id": ID.business },
       primaryImageOfPage: { "@id": ID.logo },
