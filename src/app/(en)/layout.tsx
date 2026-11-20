@@ -6,18 +6,16 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Senior Full-Stack Web Developer, Ipoh & Selangor | Zakrul",
+    default: "Senior Full-Stack Web Developer, 5 Years | Ipoh & Selangor | Zakrul",
     template: "%s | Zakrul",
   },
   description:
-    "Senior full-stack engineer Muhamad Zaqrul builds websites and custom web systems for businesses in Ipoh, Selangor and across Malaysia, with SEO, GA4 and automation.",
+    "Muhamad Zaqrul builds websites and custom web systems for businesses in Ipoh, Selangor and across Malaysia, with technical SEO, GA4 and automation.",
   keywords: [
     /* Zakrul is the site name; zakrulabd is only a social username. */
     "zakrul",
     "zakrulabd",
     "Muhamad Zaqrul",
-    "Senior Full Stack Engineer Malaysia",
-    "Senior Software Engineer Malaysia",
     "Freelance Web Developer Malaysia",
     "Web Developer Malaysia",
     "Web Developer Ipoh",
@@ -52,15 +50,15 @@ export const metadata: Metadata = {
     locale: "en_MY",
     url: SITE_URL,
     siteName: "Zakrul",
-    title: "Senior Full-Stack Web Developer, Ipoh & Selangor | Zakrul",
+    title: "Senior Full-Stack Web Developer, 5 Years | Ipoh & Selangor | Zakrul",
     description:
-      "A senior full-stack engineer building websites and custom web systems for businesses in Ipoh, Selangor and across Malaysia, with technical SEO, GA4 and automation.",
+      "Websites and custom web systems for businesses in Ipoh, Selangor and across Malaysia, with technical SEO, GA4 and automation.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Senior Full-Stack Web Developer, Ipoh & Selangor | Zakrul",
+    title: "Senior Full-Stack Web Developer, 5 Years | Ipoh & Selangor | Zakrul",
     description:
-      "A senior full-stack engineer building websites and custom web systems for businesses in Ipoh, Selangor and across Malaysia, with technical SEO, GA4 and automation.",
+      "Websites and custom web systems for businesses in Ipoh, Selangor and across Malaysia, with technical SEO, GA4 and automation.",
   },
   robots: {
     index: true,

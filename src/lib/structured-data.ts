@@ -153,7 +153,7 @@ export const structuredData = {
       "@type": "WebPage",
       "@id": ID.homepage,
       url: SITE,
-      name: "Senior Full-Stack Web Developer, Ipoh & Selangor | Zakrul",
+      name: "Senior Full-Stack Web Developer, 5 Years | Ipoh & Selangor | Zakrul",
       isPartOf: { "@id": ID.website },
       about: { "@id": ID.business },
       primaryImageOfPage: { "@id": ID.logo },

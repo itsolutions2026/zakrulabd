@@ -596,7 +596,7 @@ export default function Home({ locale = "en" }: { locale?: "en" | "ms" }) {
               </span>
             </RevealText></h1>
             <div className="w-full max-w-lg pb-12 pt-2 lg:hidden">
-              <HeroDemo />
+              <HeroDemo locale={locale} />
             </div>
             <p className="max-w-xl text-base leading-relaxed text-body"><RevealText text immediate>{t.hero.body}</RevealText></p>
             <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
@@ -622,7 +622,7 @@ export default function Home({ locale = "en" }: { locale?: "en" | "ms" }) {
           </div>
 
           <div className="hidden mx-auto w-full max-w-xl pb-6 lg:block lg:mx-0 lg:-mt-10 lg:pb-0">
-            <HeroDemo />
+            <HeroDemo locale={locale} />
           </div>
         </div>
       </section>

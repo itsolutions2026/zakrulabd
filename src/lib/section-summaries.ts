@@ -38,12 +38,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "main",
     label: { en: "Introduction", ms: "Pengenalan" },
     text: {
-      en: "I am a senior full-stack engineer. I build websites and custom web systems for businesses in Malaysia, then set up the SEO, analytics and automation that bring people to them. You deal with me directly.",
-      ms: "Saya jurutera full-stack kanan. Saya bina laman web dan sistem web tersuai untuk perniagaan di Malaysia, kemudian sediakan SEO, analitik dan automasi yang membawa orang ke laman itu. Anda berurusan terus dengan saya.",
+      en: "I help businesses get more customers and spend less time on admin, with websites, booking and customer systems, and automation. You work with me directly.",
+      ms: "Saya membantu perniagaan mendapatkan lebih ramai pelanggan dan mengurangkan kerja pentadbiran, dengan laman web, sistem tempahan dan pelanggan, serta automasi. Anda berurusan terus dengan saya.",
     },
     points: {
-      en: ["About five years in production", "You work with me directly", "Healthcare, ecommerce and AI automation"],
-      ms: ["Kira-kira lima tahun dalam sistem produksi", "Berurusan terus dengan saya", "Kesihatan, e-dagang dan automasi AI"],
+      en: ["You work with me directly", "Prototype, build, launch", "SEO and GA4 for healthcare clients"],
+      ms: ["Berurusan terus dengan saya", "Prototaip, bina, lancar", "SEO dan GA4 untuk klien kesihatan"],
     },
     suggestions: [
       { label: { en: "See what I do", ms: "Lihat apa yang saya buat" }, action: { kind: "scroll", id: "services" } },
@@ -54,12 +54,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "services",
     label: { en: "What I do", ms: "Apa yang saya buat" },
     text: {
-      en: "Four services: web development with React, Laravel and WordPress, SEO and digital marketing, live chat and automation, and hosting with ongoing support.",
-      ms: "Empat perkhidmatan: pembangunan web dengan React, Laravel dan WordPress, SEO dan pemasaran digital, live chat dan automasi, serta hosting dengan sokongan berterusan.",
+      en: "Four things I do for your business: a website that wins enquiries, more customers through Google and follow-ups, less manual work with automation and AI, and systems built around how you work.",
+      ms: "Empat perkara yang saya buat untuk perniagaan anda: laman web yang menarik pertanyaan, lebih ramai pelanggan melalui Google dan susulan, kurang kerja manual dengan automasi dan AI, serta sistem yang dibina mengikut cara anda bekerja.",
     },
     points: {
-      en: ["Web development", "SEO and marketing", "Live chat and automation", "Hosting and support"],
-      ms: ["Pembangunan web", "SEO dan pemasaran", "Live chat dan automasi", "Hosting dan sokongan"],
+      en: ["Websites that win enquiries", "More customers", "Less manual work", "Custom systems"],
+      ms: ["Laman web menarik pertanyaan", "Lebih ramai pelanggan", "Kurang kerja manual", "Sistem tersuai"],
     },
     suggestions: [
       { label: { en: "What can I build?", ms: "Apa yang boleh dibina?" }, action: { kind: "scroll", id: "projects" } },
@@ -142,7 +142,7 @@ export const sectionSummaries: SectionSummary[] = [
       ms: ["React dan Next.js", "Laravel dan WordPress", "Supabase", "Vercel"],
     },
     suggestions: [
-      { label: { en: "See my skill ratings", ms: "Lihat penilaian kemahiran" }, action: { kind: "page", path: "/about#about-skills" } },
+      { label: { en: "See my technology services", ms: "Lihat perkhidmatan teknologi saya" }, action: { kind: "page", path: "/about#about-skills" } },
     ],
   },
   {
@@ -205,12 +205,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "about-work",
     label: { en: "What I work on", ms: "Bidang kerja" },
     text: {
-      en: "React and Laravel applications, WordPress sites, technical SEO, Google Analytics 4 and enquiry automation, plus larger systems: an AWS ecommerce platform, a healthcare platform on Azure and AI automation with n8n.",
-      ms: "Aplikasi React dan Laravel, laman WordPress, SEO teknikal, Google Analytics 4 dan automasi pertanyaan, serta sistem yang lebih besar: platform e-dagang di AWS, platform kesihatan di Azure dan automasi AI dengan n8n.",
+      en: "React and Laravel applications, WordPress sites, technical SEO, Google Analytics 4 and enquiry automation. The scope follows the business problem, from a small local site to a custom system.",
+      ms: "Aplikasi React dan Laravel, laman WordPress, SEO teknikal, Google Analytics 4 dan automasi pertanyaan. Skop mengikut masalah perniagaan, daripada laman tempatan kecil kepada sistem tersuai.",
     },
     points: {
-      en: ["React and Laravel", "WordPress", "Technical SEO", "GA4", "AWS and Azure", "AI automation"],
-      ms: ["React dan Laravel", "WordPress", "SEO teknikal", "GA4", "AWS dan Azure", "Automasi AI"],
+      en: ["React and Laravel", "WordPress", "Technical SEO", "GA4", "Enquiry automation"],
+      ms: ["React dan Laravel", "WordPress", "SEO teknikal", "GA4", "Automasi pertanyaan"],
     },
     suggestions: [
       { label: { en: "See the services", ms: "Lihat perkhidmatan" }, action: { kind: "page", path: "/#services" } },
@@ -220,12 +220,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "about-skills",
     label: { en: "Skills", ms: "Kemahiran" },
     text: {
-      en: "A self-rating out of five stars for each tool, based on how often I use it on real projects.",
-      ms: "Penilaian sendiri daripada lima bintang untuk setiap alat, berdasarkan kekerapan saya menggunakannya dalam projek sebenar.",
+      en: "Five areas I work in, each with the tools I use: web and mobile, data and AI, automation, cloud, and blockchain.",
+      ms: "Lima bidang yang saya kerjakan, dengan alat yang saya guna: web dan mudah alih, data dan AI, automasi, cloud, serta blockchain.",
     },
     points: {
-      en: ["Out of five stars", "Based on real projects", "Level 1 means still learning"],
-      ms: ["Daripada lima bintang", "Berdasarkan projek sebenar", "Tahap 1 bermaksud masih belajar"],
+      en: ["Web and mobile", "Data, AI and computer vision", "Automation and integrations", "Cloud and DevOps", "Blockchain and C++"],
+      ms: ["Web dan mudah alih", "Data, AI dan visi komputer", "Automasi dan integrasi", "Cloud dan DevOps", "Blockchain dan C++"],
     },
     suggestions: [
       { label: { en: "See the work", ms: "Lihat hasil kerja" }, action: { kind: "scroll", id: "about-proof" } },

@@ -7,42 +7,42 @@ export const content = {
     cta: "Get a Free Quote",
   },
   hero: {
-    titleHl1: "Senior Full-Stack Engineer",
+    titleHl1: "Senior Engineer",
     titleB: " in Malaysia",
     titleSub: "Websites and Systems That Bring You ",
     titleHl2: "Customers",
-    body: "I am a senior full-stack engineer with about five years of building production systems, from a large ecommerce platform to healthcare software and AI automation. I build websites and custom web systems with React, Laravel, and WordPress, then set up the SEO, analytics, and automation that bring people to them. You deal with me directly, from the first conversation through to launch.",
+    body: "I help businesses get more customers and spend less time on admin, with websites, booking and customer systems, and automation, including WhatsApp and AI assistants. You work with me directly, from the first conversation through to launch.",
     ctaPrimary: "Get a Free Quote",
     ctaSecondary: "See Packages",
-    chips: ["About five years in production", "You work with me directly", "Healthcare, ecommerce and AI automation"],
+    chips: ["You work with me directly", "Prototype, build, launch", "SEO and GA4 for healthcare clients"],
   },
   services: {
     heading: "What I Do",
-    sub: "Design, development, and the marketing work that follows, so your business gets online and stays visible.",
+    sub: "Practical digital help to bring in customers, save time, and grow your business.",
     items: [
       {
-        title: "Web Development",
+        title: "Websites That Win Enquiries",
         description:
-          "Custom websites and web applications built with React, Laravel, and Tailwind. When speed to launch matters more than a bespoke build, I use WordPress instead.",
-        bullets: ["React & Laravel apps", "WordPress & Breakdance", "Supabase & MySQL backends"],
+          "A website for your business, portfolio, catalogue, online booking, or online store, built so visitors can find you, trust you, and message you on WhatsApp.",
+        bullets: ["Business & portfolio websites", "Online booking & stores", "Hosting & ongoing support"],
       },
       {
-        title: "SEO & Digital Marketing",
+        title: "More Customers",
         description:
-          "Technical audits, site structure, keyword research, and content planning, based on years of SEO work in the Malaysian healthcare sector.",
-        bullets: ["On-page & technical SEO", "Keyword research", "GA4 setup & reporting"],
+          "Show up on Google, capture enquiries, and follow them up, so new customers find you without you chasing every lead by hand. Based on years of SEO work in the Malaysian healthcare sector.",
+        bullets: ["SEO for Google search", "Lead capture & tracking", "Automatic follow-ups"],
       },
       {
-        title: "Live Chat & Automation",
+        title: "Less Manual Work",
         description:
-          "Live chat and workflow automation, so enquiries reach you straight away and nothing sits unanswered in an inbox.",
-        bullets: ["Live chat setup", "Lead capture automation", "CRM & notification flows"],
+          "WhatsApp replies, appointment reminders, and follow-ups that run on their own, plus an AI assistant that answers common customer questions.",
+        bullets: ["WhatsApp automation", "Reminders & follow-ups", "AI assistant for enquiries"],
       },
       {
-        title: "Hosting & Support",
+        title: "Systems Built for Your Business",
         description:
-          "Hosting on Vercel or Railway, a global host like Hostinger, or a local Malaysian server like ServerFreak, plus ongoing maintenance to keep your site fast, secure, and online.",
-        bullets: ["Cloud, global & local hosting", "Performance monitoring", "Ongoing maintenance"],
+          "Booking, membership, and customer record systems made around how you actually work, replacing spreadsheets and paper.",
+        bullets: ["Bookings & reservations", "Memberships & customer records", "Internal business tools"],
       },
     ],
   },
@@ -694,10 +694,10 @@ export const content = {
   },
   footer: {
     blurb:
-      "Senior full-stack engineering, custom web systems, and digital marketing for SMEs and healthcare providers in Malaysia.",
+      "Freelance web development, custom web systems, and digital marketing for SMEs and healthcare providers in Malaysia.",
     location: "Based in Selangor · Serving Ipoh and Malaysia",
     services: "SERVICES",
-    servicesLinks: ["Web Development", "SEO & Marketing", "Live Chat & Automation", "Hosting & Support"],
+    servicesLinks: ["Websites", "More Customers", "Less Manual Work", "Custom Systems"],
     howIWork: "HOW I WORK",
     howIWorkLinks: ["Process", "Packages", "Results", "Notes"],
     getStarted: "GET STARTED",

@@ -7,18 +7,18 @@ import { url } from "@/lib/site";
 import { Mark, RevealText } from "@/components/reveal-text";
 import { AsciiRipple } from "@/components/ascii-ripple";
 import { tech } from "@/lib/tech";
-import { SKILL_MAX, skillGroups } from "@/lib/skills";
+import { serviceGroups } from "@/lib/skills";
 import { wa, waMessages } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "About Muhamad Zaqrul",
   description:
-    "Meet Muhamad Zaqrul, a Selangor-based senior full-stack engineer working with businesses in Ipoh and across Malaysia. See real projects, services and contact details.",
+    "Meet Muhamad Zaqrul, a senior full-stack engineer in Malaysia with company and freelance experience. See career, projects, skills and contact details.",
   alternates: { canonical: "/about", languages: { en: url("/about"), ms: url("/ms/about"), "x-default": url("/about") } },
   openGraph: {
     title: "About Muhamad Zaqrul | Zakrul",
     description:
-      "Senior full-stack engineering, technical SEO and analytics for businesses in Ipoh, Selangor and across Malaysia.",
+      "Freelance web development, technical SEO and analytics for businesses in Ipoh, Selangor and across Malaysia.",
     url: url("/about"),
   },
 };
@@ -55,7 +55,7 @@ export default function AboutPage({ locale = "en" }: { locale?: "en" | "ms" }) {
           </RevealText></h1>
         </div>
         <p className="mt-6 text-lg leading-relaxed text-body"><RevealText text immediate>
-          {locale === "ms" ? "Saya jurutera full-stack kanan yang berpangkalan di Selangor, dengan pengalaman kira-kira lima tahun membina sistem produksi. Saya membina laman web dan sistem web tersuai untuk perniagaan di Malaysia, kemudian membantu mereka mengukur serta menambah baik cara pelanggan menemui dan menggunakan laman tersebut. Pelanggan " : "I am a senior full-stack engineer based in Selangor, with about five years of building production systems. I build websites and custom web systems for Malaysian businesses, then help them measure and improve how people find and use those sites. Clients "}
+          {locale === "ms" ? "Saya pembangun web dan pemasar digital bebas yang berpangkalan di Selangor. Saya membina laman web dan sistem web tersuai untuk perniagaan di Malaysia, kemudian membantu mereka mengukur serta menambah baik cara pelanggan menemui dan menggunakan laman tersebut. Pelanggan " : "I am a freelance web developer and digital marketer based in Selangor. I build websites and custom web systems for Malaysian businesses, then help them measure and improve how people find and use those sites. Clients "}
           <Mark>{locale === "ms" ? "berurusan terus dengan saya" : "work with me directly"}</Mark>
           {locale === "ms" ? ", daripada taklimat pertama hingga pelancaran." : ", from the first brief to launch."}
         </RevealText></p>
@@ -65,36 +65,22 @@ export default function AboutPage({ locale = "en" }: { locale?: "en" | "ms" }) {
           {locale === "ms" ? "Kerja saya merangkumi aplikasi React dan Laravel, laman WordPress, SEO teknikal, Google Analytics 4 serta automasi pertanyaan. Skop bergantung pada masalah perniagaan: laman tempatan yang kecil mungkin hanya memerlukan tawaran yang jelas dan aliran pesanan WhatsApp; operasi lebih besar mungkin memerlukan sistem serta laporan tersuai. Saya juga sedang belajar GEO, iaitu cara sesebuah laman disebut dalam jawapan AI Google." : "My work covers React and Laravel applications, WordPress websites, technical SEO, Google Analytics 4 and enquiry automation. The scope depends on the business problem: a small local site may need a clear offer and a WhatsApp order flow; a larger operation may need a custom system and reporting. I am also learning GEO, which is how a site gets mentioned in the answers Google’s AI gives."}
         </RevealText></p>
 
+        <h2 id="about-skills" className="mt-12 font-display text-2xl font-bold text-navy"><RevealText>{locale === "ms" ? "Perkhidmatan " : "Technology "}<Mark>{locale === "ms" ? "teknologi" : "services"}</Mark></RevealText></h2>
         <p className="mt-4 leading-relaxed text-body"><RevealText text>
-          {locale === "ms" ? "Saya juga pernah membina sistem yang lebih besar. Mulai 2021 saya menjadi satu-satunya jurutera pada sebuah platform e-dagang B2B yang besar di AWS, dengan lebih 100 juta imej produk dan lebih 10 juta transaksi, dan saya mempercepatkan pemuatan halaman daripada lebih sepuluh saat kepada kurang 200 ms. Saya juga jurutera full-stack kanan pada platform pemantauan kesihatan untuk kemudahan jagaan kejururawatan, merangkumi lima pangkalan kod dan dihoskan di Azure. Terbaharu, saya membina saluran automasi AI dengan n8n dan agen OpenAI yang mengkaji prospek jualan dan menulis hasilnya ke Google Sheets." : "I have also built larger systems. From 2021 I was the only engineer on a large B2B ecommerce platform running on AWS, with over 100 million product images and more than 10 million transactions, where I brought page loads from over ten seconds to under 200 ms. I was the senior full-stack engineer on a healthcare monitoring platform for nursing facilities, spread across five codebases and hosted on Azure. More recently I have built AI automation pipelines with n8n and OpenAI agents that research sales leads and write the results to Google Sheets."}
-        </RevealText></p>
-
-        <h2 id="about-skills" className="mt-12 font-display text-2xl font-bold text-navy"><RevealText>{locale === "ms" ? "Kemahiran dan " : "Skills and "}<Mark>{locale === "ms" ? "framework" : "frameworks"}</Mark></RevealText></h2>
-        <p className="mt-4 leading-relaxed text-body"><RevealText text>
-          {locale === "ms" ? "Penilaian sendiri daripada lima bintang, berdasarkan kekerapan saya menggunakan setiap alat dalam projek sebenar." : "A self-rating out of five stars, based on how often I use each tool on real projects."}
+          {locale === "ms" ? "Lima bidang yang saya kerjakan, dengan alat yang saya guna dalam setiap satu." : "Five areas I work in, with the tools I use in each."}
         </RevealText></p>
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {skillGroups.map((group) => (
-            <section key={group.label.en} className="rounded-xl border border-navy/10 bg-white p-5">
-              <h3 className="font-display text-sm font-bold uppercase tracking-[0.12em] text-muted">{group.label[locale]}</h3>
-              <ul className="mt-3 space-y-2.5">
-                {group.skills.map(({ key, level }) => {
-                  const { name, Icon, color } = tech[key];
+          {serviceGroups.map((group, i) => (
+            <section key={group.label.en} className={`rounded-xl border border-navy/10 bg-white p-5${i === serviceGroups.length - 1 && serviceGroups.length % 2 === 1 ? " sm:col-span-2" : ""}`}>
+              <h3 className="font-display text-base font-bold text-navy">{group.label[locale]}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-body">{group.text[locale]}</p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {group.tags.map((tag) => {
+                  const known = tag in tech ? tech[tag as keyof typeof tech] : null;
                   return (
-                    <li key={key} className="flex items-center gap-3">
-                      <Icon aria-hidden="true" style={{ color, width: 18, height: 18 }} className="flex-shrink-0" />
-                      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-navy">{name}</span>
-                      {level === 1 ? (
-                        <span className="flex-shrink-0 rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-semibold text-navy">{locale === "ms" ? "Masih belajar" : "Still learning"}</span>
-                      ) : (
-                      <span role="img" aria-label={locale === "ms" ? `${level} daripada ${SKILL_MAX} bintang` : `${level} out of ${SKILL_MAX} stars`} className="flex flex-shrink-0 gap-0.5">
-                        {Array.from({ length: SKILL_MAX }, (_, i) => (
-                          <svg key={i} viewBox="0 0 20 20" aria-hidden="true" className={`h-4 w-4 ${i < level ? "text-amber-500" : "text-navy/15"}`}>
-                            <path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" />
-                          </svg>
-                        ))}
-                      </span>
-                      )}
+                    <li key={tag} className="inline-flex items-center gap-1.5 rounded-full bg-navy/5 px-2.5 py-1 text-xs font-semibold text-navy">
+                      {known && <known.Icon aria-hidden="true" style={{ color: known.color, width: 14, height: 14 }} className="flex-shrink-0" />}
+                      {known ? known.name : tag}
                     </li>
                   );
                 })}

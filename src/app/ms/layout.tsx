@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Zakrul",
   },
   description:
-    "Muhamad Zaqrul, jurutera full-stack kanan, membina laman web dan sistem web untuk perniagaan di Ipoh, Selangor dan seluruh Malaysia. Khidmat SEO teknikal, analitik dan automasi turut disediakan.",
+    "Muhamad Zaqrul membina laman web dan sistem web untuk perniagaan di Ipoh, Selangor dan seluruh Malaysia. Khidmat SEO teknikal, analitik dan automasi turut disediakan.",
   authors: [{ name: "Muhamad Zaqrul", url: `${SITE_URL}/ms/about` }],
   creator: "Muhamad Zaqrul",
   publisher: "Zakrul",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Zakrul",
     title: "Khidmat Bina Laman Web di Ipoh dan Selangor | Zakrul",
     description:
-      "Laman web dan sistem web untuk perniagaan di Ipoh, Selangor dan seluruh Malaysia. Dibina terus oleh Muhamad Zaqrul, jurutera full-stack kanan.",
+      "Laman web dan sistem web untuk perniagaan di Ipoh, Selangor dan seluruh Malaysia. Dibina terus oleh Muhamad Zaqrul.",
   },
   twitter: {
     card: "summary_large_image",

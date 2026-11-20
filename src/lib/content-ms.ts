@@ -9,21 +9,21 @@ export const contentMs = {
   ...content,
   nav: { services: "Perkhidmatan", projects: "Hasil Kerja", pricing: "Pakej", contact: "Hubungi", cta: "Minta Sebut Harga" },
   hero: {
-    titleHl1: "Jurutera Full-Stack Kanan",
+    titleHl1: "Jurutera Kanan",
     titleB: " di Malaysia",
     titleSub: "Laman Web dan Sistem yang Membawa ",
     titleHl2: "Pelanggan",
-    body: "Saya jurutera full-stack kanan dengan pengalaman kira-kira lima tahun membina sistem produksi, daripada platform e-dagang yang besar kepada perisian kesihatan dan automasi AI. Saya membina laman web dan sistem web tersuai menggunakan React, Laravel dan WordPress, serta menyediakan SEO, analitik dan automasi supaya perniagaan anda mudah ditemui dan dihubungi. Anda berurusan terus dengan saya dari perbincangan pertama hingga laman dilancarkan.",
+    body: "Saya membantu perniagaan mendapatkan lebih ramai pelanggan dan mengurangkan kerja pentadbiran, dengan laman web, sistem tempahan dan pelanggan, serta automasi termasuk WhatsApp dan pembantu AI. Anda berurusan terus dengan saya dari perbincangan pertama hingga pelancaran.",
     ctaPrimary: "Minta Sebut Harga", ctaSecondary: "Lihat Pakej",
-    chips: ["Kira-kira lima tahun dalam sistem produksi", "Berurusan terus dengan saya", "Kesihatan, e-dagang dan automasi AI"],
+    chips: ["Berurusan terus dengan saya", "Prototaip hingga pelancaran", "Pengalaman SEO dan GA4 dalam sektor kesihatan"],
   },
   services: {
-    heading: "Perkhidmatan Saya", sub: "Reka bentuk, pembangunan dan pemasaran digital supaya perniagaan anda bukan sahaja ada laman web, tetapi juga mudah ditemui dalam talian.",
+    heading: "Perkhidmatan Saya", sub: "Bantuan digital yang praktikal untuk mendapatkan pelanggan, menjimatkan masa dan mengembangkan perniagaan anda.",
     items: [
-      { title: "Pembangunan Web", description: "Laman web dan aplikasi web tersuai menggunakan React, Laravel dan Tailwind. Jika anda perlu melancarkan laman dengan cepat, saya menggunakan WordPress apabila sesuai dengan skop projek.", bullets: ["Aplikasi React dan Laravel", "WordPress dan Breakdance", "Pangkalan data Supabase dan MySQL"] },
-      { title: "SEO dan Pemasaran Digital", description: "Audit teknikal, struktur laman, kajian kata kunci dan perancangan kandungan, berdasarkan pengalaman SEO dalam sektor kesihatan di Malaysia.", bullets: ["SEO on-page dan teknikal", "Kajian kata kunci", "Persediaan dan laporan GA4"] },
-      { title: "Live Chat dan Automasi", description: "Live chat dan automasi aliran kerja supaya setiap pertanyaan pelanggan diterima dengan segera dan tidak tertinggal dalam peti masuk.", bullets: ["Persediaan live chat", "Automasi pertanyaan pelanggan", "Integrasi CRM dan notifikasi"] },
-      { title: "Hosting dan Sokongan", description: "Hosting melalui Vercel, Railway, penyedia antarabangsa seperti Hostinger atau penyedia tempatan seperti ServerFreak, termasuk penyelenggaraan supaya laman kekal pantas, selamat dan sentiasa boleh diakses.", bullets: ["Hosting awan, antarabangsa dan tempatan", "Pemantauan prestasi", "Penyelenggaraan berterusan"] },
+      { title: "Laman Web yang Menarik Pertanyaan", description: "Laman web untuk perniagaan, portfolio, katalog, tempahan dalam talian atau kedai dalam talian, dibina supaya pelawat boleh menemui, mempercayai dan menghubungi anda melalui WhatsApp.", bullets: ["Laman web perniagaan dan portfolio", "Tempahan dan kedai dalam talian", "Hosting dan sokongan berterusan"] },
+      { title: "Lebih Ramai Pelanggan", description: "Muncul di Google, tangkap pertanyaan dan susulinya, supaya pelanggan baharu menemui anda tanpa anda perlu mengejar setiap prospek secara manual. Berdasarkan pengalaman SEO dalam sektor kesihatan di Malaysia.", bullets: ["SEO untuk carian Google", "Tangkapan prospek dan penjejakan", "Susulan automatik"] },
+      { title: "Kurang Kerja Manual", description: "Balasan WhatsApp, peringatan temu janji dan susulan yang berjalan sendiri, serta pembantu AI yang menjawab soalan lazim pelanggan.", bullets: ["Automasi WhatsApp", "Peringatan dan susulan", "Pembantu AI untuk pertanyaan"] },
+      { title: "Sistem Dibina untuk Perniagaan Anda", description: "Sistem tempahan, keahlian dan rekod pelanggan yang dibina mengikut cara anda bekerja, menggantikan spreadsheet dan kertas.", bullets: ["Tempahan dan reservasi", "Keahlian dan rekod pelanggan", "Alat dalaman perniagaan"] },
     ],
   },
   build: {
@@ -73,7 +73,7 @@ export const contentMs = {
   faq: faqMs,
   privacyPage: privacyMs,
   termsPage: termsMs,
-  footer: { ...content.footer, blurb: "Kejuruteraan full-stack kanan, sistem web tersuai dan pemasaran digital untuk PKS dan penyedia perkhidmatan kesihatan di Malaysia.", location: "Berpangkalan di Selangor · Berkhidmat di Ipoh dan seluruh Malaysia", services: "PERKHIDMATAN", servicesLinks: ["Pembangunan Web", "SEO dan Pemasaran", "Live Chat dan Automasi", "Hosting dan Sokongan"], howIWork: "CARA SAYA BEKERJA", howIWorkLinks: ["Proses", "Pakej", "Hasil", "Catatan"], getStarted: "MULAKAN", getStartedLinks: ["Minta Sebut Harga", "Lihat Pakej", "Lawati Kedai", "Cuba Demo Inventori", "Cuba Demo Tempahan"], privacy: "Dasar Privasi", terms: "Terma dan Syarat", rights: "Hak cipta terpelihara.", backToHome: "Kembali ke Laman Utama" },
+  footer: { ...content.footer, blurb: "Pembangunan web, sistem web tersuai dan pemasaran digital untuk PKS dan penyedia perkhidmatan kesihatan di Malaysia.", location: "Berpangkalan di Selangor · Berkhidmat di Ipoh dan seluruh Malaysia", services: "PERKHIDMATAN", servicesLinks: ["Laman Web", "Lebih Ramai Pelanggan", "Kurang Kerja Manual", "Sistem Tersuai"], howIWork: "CARA SAYA BEKERJA", howIWorkLinks: ["Proses", "Pakej", "Hasil", "Catatan"], getStarted: "MULAKAN", getStartedLinks: ["Minta Sebut Harga", "Lihat Pakej", "Lawati Kedai", "Cuba Demo Inventori", "Cuba Demo Tempahan"], privacy: "Dasar Privasi", terms: "Terma dan Syarat", rights: "Hak cipta terpelihara.", backToHome: "Kembali ke Laman Utama" },
   notFound: { code: "404", titleA: "Halaman ini ", titleHl: "tidak ditemui", body: "Pautan ini mungkin sudah berubah atau alamatnya salah. Anda boleh kembali ke laman utama, melihat pakej atau menghubungi saya jika memerlukan bantuan.", primary: "Kembali ke Laman Utama", secondary: "Lihat Pakej", linksLabel: "ATAU TERUS KE", links: ["Perkhidmatan", "Hasil Kerja", "Pakej", "Bandingkan Pakej"] },
   errorPage: { code: "500", titleA: "Berlaku masalah pada ", titleHl: "laman ini", body: "Ralat ini berpunca daripada laman saya. Sila cuba semula sebentar lagi. Jika masalah berterusan, hubungi saya dan terangkan apa yang anda lakukan semasa ralat berlaku.", primary: "Cuba Lagi", secondary: "Kembali ke Laman Utama", report: "Laporkan ralat ini" },
 };
