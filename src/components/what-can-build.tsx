@@ -4,48 +4,36 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon, CheckIcon, ChevronDownIcon } from "@/components/icons";
 import { TechMarks } from "@/components/tech-marks";
-import { tech, type TechKey } from "@/lib/tech";
+import { tech } from "@/lib/tech";
+import { findTechMentions } from "@/lib/tech-mentions";
 import { content } from "@/lib/content";
 import { contentMs } from "@/lib/content-ms";
-import {
-  BookingDemo,
-  InventoryDemo,
-  PaymentDemo,
-  ShopifySyncDemo,
-  StoreDemo,
-  TawkChatDemo,
-} from "@/components/capability-demos";
+import { WorkflowDemo } from "@/components/capability-demos";
 import { Mark, RevealText } from "@/components/reveal-text";
 
-const demos = [StoreDemo, InventoryDemo, BookingDemo, TawkChatDemo, ShopifySyncDemo, PaymentDemo];
-
-/* The stack each build actually runs on, in the same order as content.build.items.
-   Each row is a combination that ships as a unit: a backend, its database, and the
-   service the feature depends on. Laravel already implies PHP, so PHP is only
-   listed where the build is not a Laravel one. */
-const stacks: TechKey[][] = [
-  // Storefront: Laravel handles catalogue and orders, Stripe handles checkout.
-  ["laravel", "mysql", "tailwind", "stripe"],
-  // Stock dashboard: React front end against a Laravel API.
-  ["react", "laravel", "mysql", "tailwind"],
-  // Booking: Supabase realtime drives live slot availability.
-  ["next", "supabase", "tailwind"],
-  // Live chat: Tawk.to for the widget, n8n for routing the leads it captures.
-  ["tawkto", "wordpress", "n8n"],
-  // Shopify sync: a Laravel service against the Shopify Admin API.
-  ["shopify", "laravel", "mysql"],
-  // Payments: Laravel server-side, Stripe for card, FPX, and e-wallet.
-  ["laravel", "stripe", "mysql"],
-];
+/* One tool as a pill, with its logo when the site has one. */
+function TechChip({ name }: { name: string }) {
+  const key = findTechMentions(name, 1)[0];
+  const mark = key ? tech[key] : null;
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white py-1 pl-3 pr-3 text-[12px] font-semibold text-ink shadow-xs">
+      {mark && <mark.Icon className="h-3.5 w-3.5" style={{ color: mark.color }} aria-hidden="true" />}
+      {name}
+    </span>
+  );
+}
 
 export function WhatCanBuild({ copy = content }: { copy?: typeof content | typeof contentMs }) {
   const t = copy;
   const [active, setActive] = useState(0);
   const capabilities = t.build.items;
   const current = capabilities[active] ?? capabilities[0];
-  const CurrentDemo = demos[active] ?? demos[0];
-  const currentStack = stacks[active] ?? stacks[0];
-  const showcase = t.build.showcases.find((s) => s.pill === current.pill);
+  const showcases = t.build.showcases.filter((s) => s.pill === current.pill);
+  /* A tab can send the reader to the About page for its tools instead of
+     listing them, when the list would be too long to be useful here. */
+  const worksWithLink = "worksWithLink" in current ? current.worksWithLink : undefined;
+  /* The About page lists the full skills; the Malay site has its own copy. */
+  const skillsHref = `${t === contentMs ? "/ms" : ""}/about#about-skills`;
 
   return (
     <section id="projects" className="border-y border-border bg-white px-6 py-24">
@@ -58,23 +46,22 @@ export function WhatCanBuild({ copy = content }: { copy?: typeof content | typeo
           </RevealText></h2>
           <div className="flex flex-col gap-4 lg:pt-2">
             <p className="text-base leading-relaxed text-body md:text-lg"><RevealText key={active} text>{current.description}</RevealText></p>
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-muted"><RevealText text>{t.build.builtWith}</RevealText></span>
-              {currentStack.map((key) => {
-                const { name, Icon, color } = tech[key];
-                return (
-                  <span
-                    key={key}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white py-1 pl-1.5 pr-3 text-[12.5px] font-semibold text-ink shadow-xs"
-                  >
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-bg">
-                      <Icon className="h-3.5 w-3.5" style={{ color }} aria-hidden="true" />
-                    </span>
-                    {name}
-                  </span>
-                );
-              })}
-            </div>
+            {worksWithLink ? (
+              <Link
+                href={skillsHref}
+                className="group inline-flex w-fit items-center gap-1.5 text-[13.5px] font-semibold text-primary-600 underline decoration-primary-600/40 underline-offset-4 hover:decoration-primary-600"
+              >
+                {worksWithLink}
+                <ArrowRightIcon className="h-3.5 w-3.5 flex-shrink-0 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            ) : (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-muted"><RevealText text>{t.build.builtWith}</RevealText></span>
+                {current.worksWith.map((name) => (
+                  <TechChip key={name} name={name} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
@@ -144,14 +131,28 @@ export function WhatCanBuild({ copy = content }: { copy?: typeof content | typeo
               </div>
             </div>
 
+            <span className="mt-1 text-[10px] font-bold uppercase tracking-wider text-muted">{t.build.examplesLabel}</span>
+            <div className="flex flex-col gap-2">
+              {current.examples.map((ex) => (
+                <p key={ex.who} className="text-[12.5px] leading-snug text-ink">
+                  <span className="font-semibold text-navy">{ex.who}: </span>
+                  {ex.what}
+                </p>
+              ))}
+            </div>
+
             {/* Capabilities with a working demo page link to it. */}
             {/* The address carries the marker rather than the sentence: .hl is
                 the site's emphasis, and the destination is the part worth
                 emphasising. It replaces the brackets it would otherwise sit
                 inside — a marker and a pair of parentheses do the same job, and
                 two of them is one too many. */}
-            {showcase && (
+            {showcases.length === 0 && (
+              <span className="mt-1 w-fit rounded-full bg-bg px-2.5 py-1 text-[11px] font-semibold text-muted">{t.build.concept}</span>
+            )}
+            {showcases.map((showcase) => (
               <Link
+                key={showcase.href}
                 href={showcase.href}
                 className="group mt-1 inline-flex w-fit flex-wrap items-center gap-x-1.5 gap-y-1 text-[12.5px] font-semibold leading-relaxed text-ink"
               >
@@ -161,11 +162,11 @@ export function WhatCanBuild({ copy = content }: { copy?: typeof content | typeo
                 </Mark>
                 <ArrowRightIcon className="h-3.5 w-3.5 flex-shrink-0 text-muted transition-colors group-hover:text-navy" />
               </Link>
-            )}
+            ))}
           </div>
 
-          <div className="h-80 overflow-hidden rounded-2xl border border-border bg-white shadow-xl md:h-96">
-            <CurrentDemo />
+          <div className="h-[25rem] overflow-hidden rounded-2xl border border-border bg-white shadow-xl md:h-[34rem]">
+            <WorkflowDemo steps={current.flow} title={current.pill} label={t.build.flowLabel} />
           </div>
         </div>
       </div>

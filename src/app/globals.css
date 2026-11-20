@@ -311,6 +311,62 @@ p:has(.hl) {
   to { transform: translate(10px, 14px) rotate(2.5deg); opacity: 0; }
 }
 
+/* What I Do, "Less Manual Work": a chat that plays itself on a 9s loop. */
+@keyframes wa-b1 {
+  0%, 4% { opacity: 0; transform: translateY(6px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  96%, 100% { opacity: 0; transform: translateY(0); }
+}
+@keyframes wa-b2 {
+  0%, 36% { opacity: 0; transform: translateY(6px); }
+  42%, 90% { opacity: 1; transform: translateY(0); }
+  96%, 100% { opacity: 0; transform: translateY(0); }
+}
+@keyframes wa-b3 {
+  0%, 58% { opacity: 0; transform: translateY(6px); }
+  64%, 90% { opacity: 1; transform: translateY(0); }
+  96%, 100% { opacity: 0; transform: translateY(0); }
+}
+@keyframes wa-typing {
+  0%, 17% { opacity: 0; }
+  20%, 33% { opacity: 1; }
+  36%, 100% { opacity: 0; }
+}
+@keyframes wa-online {
+  0%, 17% { opacity: 1; }
+  20%, 33% { opacity: 0; }
+  36%, 100% { opacity: 1; }
+}
+@keyframes wa-ticks {
+  0%, 50% { color: #8696a0; }
+  56%, 100% { color: #53bdeb; }
+}
+.wa-b1 { animation: wa-b1 9s ease-out infinite both; }
+.wa-b2 { animation: wa-b2 9s ease-out infinite both; }
+.wa-b3 { animation: wa-b3 9s ease-out infinite both; }
+.wa-typing { animation: wa-typing 9s linear infinite both; opacity: 0; }
+.wa-online { animation: wa-online 9s linear infinite both; }
+.wa-ticks { animation: wa-ticks 9s linear infinite both; color: #8696a0; }
+@media (prefers-reduced-motion: reduce) {
+  .wa-b1, .wa-b2, .wa-b3, .wa-online { animation: none; opacity: 1; transform: none; }
+  .wa-typing { animation: none; opacity: 0; }
+  .wa-ticks { animation: none; color: #53bdeb; }
+}
+
+/* What I Can Build: each workflow step lights up in turn on a 10s loop. */
+@keyframes flow-step {
+  0%, 24%, 100% {
+    border-color: var(--color-border);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.06);
+    transform: none;
+  }
+  3%, 20% {
+    border-color: #f59e0b;
+    box-shadow: 0 8px 20px rgb(245 158 11 / 0.22);
+    transform: translateX(4px);
+  }
+}
+
 /* Store showcase: product drawings moving on hover. */
 @keyframes icon-wiggle {
   0%, 100% { transform: rotate(0); }

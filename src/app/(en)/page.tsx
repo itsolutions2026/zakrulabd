@@ -11,7 +11,7 @@ import {
   SearchIcon,
   StarIcon,
 } from "@/components/icons";
-import { HeroDemo, LiveChartDemo, LiveChatDemo, LiveCodeDemo, LiveStatusDemo } from "@/components/live-demos";
+import { HeroDemo, LiveChartDemo, LiveCodeDemo, LiveStatusDemo, LiveWhatsAppDemo } from "@/components/live-demos";
 import { WhatCanBuild } from "@/components/what-can-build";
 import { ClientLogos } from "@/components/client-logos";
 import { NoteCard, NoteNextCard } from "@/components/note-card";
@@ -37,7 +37,7 @@ import { Mark, RevealText } from "@/components/reveal-text";
 import { AsciiRipple } from "@/components/ascii-ripple";
 
 /* Presentation-only data: visuals, layout, links, and contact details. */
-const serviceDemos = [LiveCodeDemo, LiveChartDemo, LiveChatDemo, LiveStatusDemo];
+const serviceDemos = [LiveCodeDemo, LiveChartDemo, LiveWhatsAppDemo, LiveStatusDemo];
 const processArt = [SvgResearching, SvgPrototypingProcess, SvgWebDevelopment, SvgLaunching];
 
 const tierMeta = [

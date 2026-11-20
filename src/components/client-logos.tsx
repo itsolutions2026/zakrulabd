@@ -8,7 +8,18 @@ import { Mark, RevealText } from "@/components/reveal-text";
    content.clients.items, and reordering it can never pair a logo with another
    client's link. Each mark is the client's own, taken from their live site.
    Width and height are the file's real pixels so Next can build the srcset. */
-const clientAssets: Record<string, { url: string; logo: string; width: number; height: number }> = {
+type ClientAsset = {
+  url: string;
+  logo: string;
+  width: number;
+  height: number;
+  caption?: string;
+  /* Marks set as a symbol with typed words beside or under it, rather than a
+     picture of the whole logo. */
+  lockup?: "medstreamline";
+};
+
+const clientAssets: Record<string, ClientAsset> = {
   "Sri Tanduk Enterprise": {
     url: "https://sritanduk.com/",
     logo: "/clients/sri-tanduk.png",
@@ -32,6 +43,50 @@ const clientAssets: Record<string, { url: string; logo: string; width: number; h
     logo: "/clients/lpje.png",
     width: 900,
     height: 465,
+  },
+  /* The marks below are the client's icon on its own, with a small title
+     under it, the way the Haikai Tech and law practice marks above are set. */
+  Unitee: {
+    url: "https://uniteegraphics.com/",
+    logo: "/clients/unitee.png",
+    width: 300,
+    height: 300,
+    caption: "Unitee",
+  },
+  MedStreamline: {
+    url: "https://medstreamline.com/",
+    logo: "/clients/medstreamline.png",
+    width: 178,
+    height: 178,
+    lockup: "medstreamline",
+  },
+  "Febest Auto Parts Australia": {
+    url: "https://febest.com.au/",
+    logo: "/clients/febest.png",
+    width: 600,
+    height: 111,
+    caption: "Auto Parts",
+  },
+  "IT Toys": {
+    url: "https://ittoysline.com/",
+    logo: "/clients/it-toys.png",
+    width: 300,
+    height: 300,
+    caption: "IT Toys",
+  },
+  "Tradies Club": {
+    url: "https://tradiesclub.com.au/",
+    logo: "/clients/tradies-club.png",
+    width: 256,
+    height: 138,
+    caption: "Tradies Club",
+  },
+  "Just CBD Store": {
+    url: "https://justcbdstore.com/",
+    logo: "/clients/just-cbd.png",
+    width: 300,
+    height: 300,
+    caption: "CBD Store",
   },
 };
 
@@ -81,12 +136,24 @@ export function ClientLogos({ copy = content }: { copy?: typeof content | typeof
 
         {/* The grid is capped rather than spread across the full 1200px shell:
             150px tiles stretched over that width read as stray marks with
-            holes between them. Capping it keeps them a group. Five slots (four
-            clients and the invitation) sit in one row on wide screens. */}
-        <div className="mx-auto grid max-w-[340px] grid-cols-2 justify-items-center gap-3 sm:max-w-[500px] sm:grid-cols-3 sm:gap-4 lg:max-w-[830px] lg:grid-cols-5">
+            holes between them. Capping it keeps them a group. The tiles and the
+            invitation wrap into rows of six on wide screens. */}
+        <div className="mx-auto grid max-w-[340px] grid-cols-2 justify-items-center gap-3 sm:max-w-[500px] sm:grid-cols-3 sm:gap-4 lg:max-w-[1000px] lg:grid-cols-6">
           {t.clients.items.map((client) => {
             const asset = clientAssets[client.name];
-            if (!asset) return null;
+            /* A client with no logo and no live site to link to (a company
+               whose domain no longer serves it, or one with no public site)
+               is shown by name, in a tile of the same size, with no link. */
+            if (!asset) {
+              return (
+                <span
+                  key={client.name}
+                  className="flex aspect-square w-[150px] max-w-full items-center justify-center rounded-2xl border border-white/10 bg-white p-5 text-center font-display text-[15px] font-extrabold leading-tight text-navy"
+                >
+                  {client.name}
+                </span>
+              );
+            }
             return (
               <a
                 key={client.name}
@@ -94,16 +161,56 @@ export function ClientLogos({ copy = content }: { copy?: typeof content | typeof
                 target="_blank"
                 rel="noopener noreferrer"
                 title={client.name}
-                className="group flex aspect-square w-[150px] max-w-full items-center justify-center rounded-2xl border border-white/10 bg-white p-5 transition duration-200 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-lg hover:shadow-black/30"
+                className={`group flex aspect-square w-[150px] max-w-full items-center justify-center rounded-2xl border border-white/10 bg-white p-5 transition duration-200 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-lg hover:shadow-black/30 ${asset.caption ? "flex-col gap-3" : ""}`}
               >
-                <ImageWithSkeleton
-                  src={asset.logo}
-                  alt={client.name}
-                  width={asset.width}
-                  height={asset.height}
-                  wrapperClassName="flex h-full w-full items-center justify-center"
-                  className="max-h-full w-auto object-contain transition duration-300 lg:grayscale lg:group-hover:grayscale-0"
-                />
+                {asset.lockup === "medstreamline" && (
+                  /* The cross-and-signal symbol as its own image, with the name
+                     broken over two lines beside it: "Med" large, "Streamline"
+                     small. */
+                  <span className="flex items-center gap-2 transition duration-300 lg:grayscale lg:group-hover:grayscale-0">
+                    {/* Redrawn from their mark without the signal arcs and dot:
+                        only the plus, as three blue brackets and a black one. */}
+                    <svg viewBox="0 0 540 540" aria-hidden="true" className="h-9 w-9 flex-shrink-0">
+                      <g fill="#1838b0">
+                        <rect x="155" y="12" width="223" height="45" />
+                        <rect x="155" y="12" width="45" height="183" />
+                        <rect x="335" y="12" width="43" height="183" />
+                        <rect x="378" y="155" width="142" height="40" />
+                        <rect x="475" y="155" width="45" height="225" />
+                        <rect x="378" y="335" width="142" height="45" />
+                        <rect x="155" y="475" width="223" height="45" />
+                        <rect x="155" y="390" width="45" height="130" />
+                        <rect x="335" y="335" width="43" height="185" />
+                      </g>
+                      <g fill="#111111">
+                        <rect x="15" y="155" width="125" height="40" />
+                        <rect x="15" y="155" width="45" height="225" />
+                        <rect x="15" y="335" width="185" height="45" />
+                      </g>
+                    </svg>
+                    <span className="flex flex-col leading-none">
+                      <span className="font-display text-[30px] font-extrabold tracking-tight text-[#1838b0]">Med</span>
+                      <span className="mt-1 font-display text-[11px] font-semibold tracking-wide text-slate-800">Streamline</span>
+                    </span>
+                  </span>
+                )}
+                {!asset.lockup && (
+                  <>
+                    <ImageWithSkeleton
+                      src={asset.logo}
+                      alt={client.name}
+                      width={asset.width}
+                      height={asset.height}
+                      wrapperClassName={`flex w-full items-center justify-center ${asset.caption ? "h-[58%]" : "h-full"}`}
+                      className={`object-contain transition duration-300 lg:grayscale lg:group-hover:grayscale-0 ${asset.caption ? "rounded-lg" : ""} ${asset.width / asset.height > 3 ? "h-auto w-full" : "max-h-full w-auto"}`}
+                    />
+                    {asset.caption && (
+                      <span className="text-center font-display text-[9.5px] font-bold uppercase leading-tight tracking-[0.16em] text-navy/70">
+                        {asset.caption}
+                      </span>
+                    )}
+                  </>
+                )}
               </a>
             );
           })}

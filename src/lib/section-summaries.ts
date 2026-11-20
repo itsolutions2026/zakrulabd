@@ -54,12 +54,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "services",
     label: { en: "What I do", ms: "Apa yang saya buat" },
     text: {
-      en: "Four things I do for your business: a website that wins enquiries, more customers through Google and follow-ups, less manual work with automation and AI, and systems built around how you work.",
-      ms: "Empat perkara yang saya buat untuk perniagaan anda: laman web yang menarik pertanyaan, lebih ramai pelanggan melalui Google dan susulan, kurang kerja manual dengan automasi dan AI, serta sistem yang dibina mengikut cara anda bekerja.",
+      en: "Four things I do for your business: websites and mobile and desktop apps, more customers through Google and follow-ups, less manual work with automation and AI, and custom systems connected to your CRM, ERP and cloud tools.",
+      ms: "Empat perkara yang saya buat untuk perniagaan anda: laman web serta aplikasi mudah alih dan desktop, lebih ramai pelanggan melalui Google dan susulan, kurang kerja manual dengan automasi dan AI, serta sistem tersuai yang disambungkan kepada CRM, ERP dan alat awan anda.",
     },
     points: {
-      en: ["Websites that win enquiries", "More customers", "Less manual work", "Custom systems"],
-      ms: ["Laman web menarik pertanyaan", "Lebih ramai pelanggan", "Kurang kerja manual", "Sistem tersuai"],
+      en: ["Websites and apps", "More customers", "Less manual work", "Systems and integrations"],
+      ms: ["Laman web dan aplikasi", "Lebih ramai pelanggan", "Kurang kerja manual", "Sistem dan integrasi"],
     },
     suggestions: [
       { label: { en: "What can I build?", ms: "Apa yang boleh dibina?" }, action: { kind: "scroll", id: "projects" } },
@@ -70,12 +70,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "projects",
     label: { en: "What I can build", ms: "Apa yang boleh saya bina" },
     text: {
-      en: "Pick what you want built, such as an online store, inventory system, booking system or live chat, and see what each one includes.",
-      ms: "Pilih apa yang anda mahu bina, seperti kedai dalam talian, sistem inventori, sistem tempahan atau live chat, dan lihat apa yang termasuk dalam setiap satu.",
+      en: "Six workflows, step by step: enquiries, reservations and memberships, sales to accounts, an AI assistant, data and analytics, and websites and apps, with the tools each one works with.",
+      ms: "Enam aliran kerja, langkah demi langkah: pertanyaan, tempahan dan keahlian, jualan ke akaun, pembantu AI, data dan analitik, serta laman web dan aplikasi, dengan alat yang digunakan setiap satu.",
     },
     points: {
-      en: ["Online store", "Inventory system", "Booking system", "Live chat"],
-      ms: ["Kedai dalam talian", "Sistem inventori", "Sistem tempahan", "Live chat"],
+      en: ["Enquiries", "Reservations and memberships", "Sales to accounts", "AI assistant", "Data and analytics"],
+      ms: ["Pertanyaan", "Tempahan dan keahlian", "Jualan ke akaun", "Pembantu AI", "Data dan analitik"],
     },
     suggestions: [
       { label: { en: "Try the store demo", ms: "Cuba demo kedai" }, action: { kind: "page", path: "/showcase/online-store", localized: false } },
