@@ -70,12 +70,12 @@ export const sectionSummaries: SectionSummary[] = [
     id: "projects",
     label: { en: "What I can build", ms: "Apa yang boleh saya bina" },
     text: {
-      en: "Six workflows, step by step: enquiries, reservations and memberships, sales to accounts, an AI assistant, data and analytics, and websites and apps, with the tools each one works with.",
-      ms: "Enam aliran kerja, langkah demi langkah: pertanyaan, tempahan dan keahlian, jualan ke akaun, pembantu AI, data dan analitik, serta laman web dan aplikasi, dengan alat yang digunakan setiap satu.",
+      en: "Seven workflows, step by step: lead generation, enquiries, reservations and memberships, sales to accounts, an AI assistant, data and analytics, and websites and apps, with the tools each one works with.",
+      ms: "Tujuh aliran kerja, langkah demi langkah: penjanaan prospek, pertanyaan, tempahan dan keahlian, jualan ke akaun, pembantu AI, data dan analitik, serta laman web dan aplikasi, dengan alat yang digunakan setiap satu.",
     },
     points: {
-      en: ["Enquiries", "Reservations and memberships", "Sales to accounts", "AI assistant", "Data and analytics"],
-      ms: ["Pertanyaan", "Tempahan dan keahlian", "Jualan ke akaun", "Pembantu AI", "Data dan analitik"],
+      en: ["Lead generation", "Enquiries", "Reservations and memberships", "Sales to accounts", "AI assistant", "Data and analytics"],
+      ms: ["Penjanaan prospek", "Pertanyaan", "Tempahan dan keahlian", "Jualan ke akaun", "Pembantu AI", "Data dan analitik"],
     },
     suggestions: [
       { label: { en: "Try the store demo", ms: "Cuba demo kedai" }, action: { kind: "page", path: "/showcase/online-store", localized: false } },
@@ -86,8 +86,8 @@ export const sectionSummaries: SectionSummary[] = [
     id: "process",
     label: { en: "How I work", ms: "Cara saya bekerja" },
     text: {
-      en: "Four stages: discover what your business needs, design and prototype, build with regular check-ins, then launch and keep improving with GA4.",
-      ms: "Empat peringkat: fahami keperluan perniagaan anda, reka dan buat prototaip, bina dengan semakan berkala, kemudian lancarkan dan terus tambah baik dengan GA4.",
+      en: "Six stages: discover what your business needs, plan and design, build with regular check-ins, test and QA, deploy and host, then launch and keep supporting it.",
+      ms: "Enam peringkat: fahami keperluan perniagaan anda, rancang dan reka, bina dengan semakan berkala, uji dan QA, hantar dan hosting, kemudian lancarkan dan terus beri sokongan.",
     },
     points: {
       en: ["Discover", "Design and prototype", "Build", "Launch and grow"],

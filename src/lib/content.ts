@@ -77,6 +77,34 @@ export const content = {
     ],
     items: [
       {
+        pill: "Lead Generation",
+        headingBefore: "A Steady Flow of ",
+        headingHighlight: "Qualified Leads",
+        headingAfter: "",
+        description:
+          "I build systems that find prospects for you: web scraping of public business listings and websites, cleaning and verifying the data, scoring how well each lead fits, finding the right contact, and sending it to your CRM with a first follow-up ready. Only public information is collected, and outreach follows the rules.",
+        brief: "We rely on referrals, and we never have time to search for new customers or follow up.",
+        features: [
+          "Web scraping of public listings, directories, and websites",
+          "Cleaned, de-duplicated, and verified contact data",
+          "Lead scoring against your ideal customer",
+          "Straight into your CRM or sheet, with follow-ups ready",
+        ],
+        examples: [
+          { who: "Renovation contractor", what: "New homeowner and developer leads in your area, each with a fit score." },
+          { who: "Photographer", what: "Event planners and venues that book photographers, collected and followed up." },
+          { who: "B2B supplier", what: "Distributors and retailers in a region, with the decision maker's name." },
+        ],
+        worksWith: ["Apify", "n8n", "OpenAI", "Google Sheets", "Zoho CRM", "Email"],
+        flow: [
+          { icon: "target", title: "Ideal customer defined", detail: "Industry, area, size, and what a good lead looks like" },
+          { icon: "search", title: "Public data collected", detail: "Listings, directories, websites, and reviews (web scraping)" },
+          { icon: "clean", title: "Cleaned and verified", detail: "Duplicates removed, contact details checked" },
+          { icon: "star", title: "Scored and enriched", detail: "A fit score, and the right decision maker found" },
+          { icon: "mail", title: "Delivered and followed up", detail: "Into your CRM, with a first email ready to send" },
+        ],
+      },
+      {
         pill: "Enquiries",
         headingBefore: "Every Enquiry Gets a ",
         headingHighlight: "Reply and an Owner",
@@ -277,27 +305,37 @@ export const content = {
   },
   process: {
     heading: "How I Work",
-    sub: "Four stages, working with me directly, from the first conversation to launch and the work that follows.",
+    sub: "Six stages, working with me directly, from the first conversation through testing, hosting, and launch to the support that follows.",
     items: [
       {
         title: "Discover",
         description:
-          "I learn what your business does, who your customers are, and what the site needs to achieve before any code is written.",
+          "I learn how your business runs, who your customers are, and which process or problem we are solving, so we agree what success looks like before anything is built.",
       },
       {
-        title: "Design & Prototype",
+        title: "Plan & Design",
         description:
-          "Wireframes and a clickable prototype, so you can see the layout and change it before it gets built.",
+          "A clear scope, a simple plan, and a prototype or workflow map you can click through, so you can change things before they are built.",
       },
       {
         title: "Build",
         description:
-          "Development on a modern, maintainable stack, with regular check-ins so you always know where the project stands.",
+          "Development in short steps on a maintainable stack, with regular check-ins and a working version you can see along the way.",
       },
       {
-        title: "Launch & Grow",
+        title: "Test & QA",
         description:
-          "Go live, then measure with GA4 and improve rankings, page speed, and conversion over time.",
+          "Quality checks before anything goes live: every feature and edge case tested, security, speed, and different devices checked, and testing with you before sign-off.",
+      },
+      {
+        title: "Deploy & Host",
+        description:
+          "DevOps setup: hosting on cloud or local servers, automated deployment, backups, SSL, and monitoring, so every release is safe and repeatable.",
+      },
+      {
+        title: "Launch & Support",
+        description:
+          "Go live, train your team, then monitor, maintain, and improve. Results are measured with GA4 and reports, and ongoing support is available.",
       },
     ],
   },

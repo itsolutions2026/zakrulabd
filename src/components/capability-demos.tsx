@@ -25,9 +25,12 @@ import {
   TbRobot,
   TbSend,
   TbShoppingCart,
+  TbStars,
   TbTags,
+  TbTarget,
   TbUserCheck,
   TbWorld,
+  TbWorldSearch,
 } from "react-icons/tb";
 import type { IconType } from "react-icons";
 
@@ -65,6 +68,9 @@ export const flowIcons: Record<string, IconType> = {
   bulb: TbBulb,
   trend: TbChartLine,
   dashboard: TbLayoutDashboard,
+  target: TbTarget,
+  search: TbWorldSearch,
+  star: TbStars,
 };
 
 export type FlowStep = { icon: string; title: string; detail: string };

@@ -24,6 +24,9 @@ import { postsMs } from "@/lib/posts-ms";
 import { WHATSAPP_NUMBER, wa, waMessages } from "@/lib/contact";
 import { tech, techMarquee } from "@/lib/tech";
 import {
+  SvgBugFixing,
+  SvgCloudHosting,
+  SvgDevelopment,
   SvgGrowthAnalytics,
   SvgLaunching,
   SvgMedicalCare,
@@ -31,14 +34,13 @@ import {
   SvgPrototypingProcess,
   SvgResearching,
   SvgSearchEngines,
-  SvgWebDevelopment,
 } from "iblis-react-undraw";
 import { Mark, RevealText } from "@/components/reveal-text";
 import { AsciiRipple } from "@/components/ascii-ripple";
 
 /* Presentation-only data: visuals, layout, links, and contact details. */
 const serviceDemos = [LiveCodeDemo, LiveChartDemo, LiveWhatsAppDemo, LiveStatusDemo];
-const processArt = [SvgResearching, SvgPrototypingProcess, SvgWebDevelopment, SvgLaunching];
+const processArt = [SvgResearching, SvgPrototypingProcess, SvgDevelopment, SvgBugFixing, SvgCloudHosting, SvgLaunching];
 
 const tierMeta = [
   { ctaStyle: "outline" as const, highlighted: false },
@@ -677,7 +679,7 @@ export default function Home({ locale = "en" }: { locale?: "en" | "ms" }) {
             <h2 className="font-display text-[30px] font-bold text-navy md:text-5xl"><RevealText>{t.process.heading}</RevealText></h2>
             <p className="text-base text-body"><RevealText text>{t.process.sub}</RevealText></p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {t.process.items.map((p, i) => {
               const Illustration = processArt[i];
               return (
